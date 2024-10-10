@@ -294,7 +294,7 @@ h6 {
 
 .navbar-mobile {
   position: fixed;
-  overflow: hidden;
+  overflow: auto;
   top: 0;
   right: 0;
   left: 0;
@@ -342,15 +342,16 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  overflow: hidden;
-  position: absolute;
+  position: relative; /* Mengganti absolute dengan relative */
   width: 100%;
-  top: 140px;
-  bottom: 100%;
-  opacity: 0;
+  top: 140px; /* Sesuaikan sesuai layout */
+  bottom: auto; /* Menghapus pembatasan tinggi penuh */
+  overflow-y: auto; /* Membolehkan scroll vertikal */
+  opacity: 1; /* Set ke 1 agar selalu terlihat */
   transition: ease-in-out 0.4s;
   z-index: 2;
 }
+
 
 section.section-show {
   top: 100px;
@@ -553,7 +554,7 @@ section .container {
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .testimonials .testimonial-item {
@@ -790,12 +791,26 @@ section .container {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+
+.services {
+  max-height: auto; /* Atur sesuai kebutuhan */
+  overflow-y: auto;
+}
+
+
+.services .scrollable-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
 .services .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
-  padding: 80px 20px;
+  padding: 40px 20px;
   transition: all ease-in-out 0.3s;
 }
+
 
 .services .icon-box .icon {
   margin: 0 auto;
@@ -914,7 +929,7 @@ section .container {
   align-items: center;
   transition: 0.3s;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
 }
