@@ -792,12 +792,10 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 
-
-.services {
-  max-height: auto; /* Atur sesuai kebutuhan */
-  overflow-y: auto;
+#services {
+  max-height: 100vh; /* Membatasi tinggi hingga layar penuh */
+  overflow-y: auto; /* Memastikan konten dapat di-scroll */
 }
-
 
 .services .scrollable-content {
   max-height: 100%;
@@ -811,7 +809,6 @@ section .container {
   transition: all ease-in-out 0.3s;
 }
 
-
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
@@ -824,6 +821,7 @@ section .container {
   justify-content: center;
   margin-bottom: 20px;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .services .icon-box .icon i {
@@ -881,6 +879,7 @@ section .container {
 .services .icon-box:hover p {
   color: #fff;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio
