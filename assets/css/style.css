@@ -352,6 +352,10 @@ section {
   z-index: 2;
 }
 
+#services {
+  overflow: visible;
+}
+
 section.section-show {
   top: 100px;
   bottom: auto;
